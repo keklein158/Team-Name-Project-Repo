@@ -49,4 +49,22 @@ library(neonUtilities)
 
 Hey this is a test on 2/17/2026!
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+First attempt at pulling NEON Data: 2/17
+```{r}
+#Pull data
+precip <- "DP1.10043.001"
+
+#Select sites and dates *DATES SHOULD BE REEVALUATED
+my_sites <- c("BIGC", "TECR")
+start_date <- "2020-01"
+end_date <- "2022-12"
+
+#Pull
+list2env((loadByProduct(dpID = precip, 
+                        site = my_sites, 
+                        include.provisional = FALSE,
+                        startdate = start_date,
+                        enddate = end_date)),
+         .GlobalEnv)
+```
+
