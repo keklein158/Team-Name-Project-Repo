@@ -68,3 +68,21 @@ list2env((loadByProduct(dpID = discharge,
          .GlobalEnv)
 ```
 
+```{r}
+#Pull data from	"Fish electrofishing, gill netting, and fyke netting counts"
+fish <- "DP1.20107.001"
+
+#Select sites and dates 
+my_sites <- c("BIGC", "TECR")
+start_date <- "2012-01"
+end_date <- "2022-12"
+
+#Pull
+list2env((loadByProduct(dpID = fish, 
+                        site = my_sites, 
+                        include.provisional = FALSE,
+                        startdate = start_date,
+                        enddate = end_date)),
+         .GlobalEnv)
+```
+
