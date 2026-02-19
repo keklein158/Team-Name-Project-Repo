@@ -98,21 +98,35 @@ list2env((loadByProduct(dpID = fish,
 ```
 
 ```{r}
+<<<<<<< HEAD
+#Pull data from "Aquatic plants"
+plants <- "DP1.20072.001"
+
+#Select sites and dates *DATES SHOULD BE REEVALUATED
+=======
 #Benthic microbe community composition, DP1.20086.001
 
 benthic <- "DP1.20086.001"
 
 #Select sites and dates 
+>>>>>>> 380eacbb67e133bc31e9c0d89ce02c328868e615
 my_sites <- c("BIGC", "TECR")
 start_date <- "2012-01"
 end_date <- "2022-12"
 
 #Pull
+<<<<<<< HEAD
+list2env((loadByProduct(dpID = plants, 
+=======
 list2env((loadByProduct(dpID = benthic, 
+>>>>>>> 380eacbb67e133bc31e9c0d89ce02c328868e615
                         site = my_sites, 
                         include.provisional = FALSE,
                         startdate = start_date,
                         enddate = end_date)),
          .GlobalEnv)
 ```
+<<<<<<< HEAD
+=======
 
+>>>>>>> 380eacbb67e133bc31e9c0d89ce02c328868e615
