@@ -1,0 +1,217 @@
+table,fieldName,description,dataType,units,downloadPkg,pubFormat,primaryKey,categoricalCodeName
+csd_15_min,domainID,Unique identifier of the NEON domain,string,NA,appended by stackByTable,NA,N,
+csd_15_min,siteID,NEON site code,string,NA,appended by stackByTable,NA,N,
+csd_15_min,horizontalPosition,Index of horizontal location at a NEON site,string,NA,appended by stackByTable,NA,N,
+csd_15_min,verticalPosition,Index of vertical location at a NEON site,string,NA,appended by stackByTable,NA,N,
+csd_15_min,startDateTime,Date and time at which a sampling is initiated,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+csd_15_min,endDateTime,Date and time at which a sampling is completed,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+csd_15_min,stationHorizontalID,Horizontal code for station,string,NA,basic,asIs,NA,NA
+csd_15_min,curveID,Unique identifier for the curve fit to gauge and discharge measurements,string,NA,basic,asIs,NA,NA
+csd_15_min,regressionID,Unique identifier for a gauge height vs. water column height regression equation,string,NA,basic,asIs,NA,NA
+csd_15_min,waterColumnHeightContinuous,"Surface water column height over the sensor, averaged over 15 minute intervals",real,meter,expanded,*.###(round),NA,NA
+csd_15_min,stageContinuous,Water level relative to the staff gauge; averaged over 15 minute intervals,real,meter,basic,*.###(round),NA,NA
+csd_15_min,stageTotalUncert,Total uncertainty associated with the stage timeseries data; the sum of non-systematic (sensor calibration) and systematic (regression-model fit) uncertainty,real,meter,basic,*.###(round),NA,NA
+csd_15_min,dischargeContinuous,Volume of surface water per unit time; averaged over 15 minute intervals,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_15_min,dischargeUpperParamUncert,Upper bound of the 95% confidence interval (two standard deviations) for mean discharge including parametric error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_15_min,dischargeLowerParamUncert,Lower bound of the 95% confidence interval (two standard deviations) for mean discharge including parametric error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_15_min,dischargeUpperRemnUncert,Upper bound of the 95% confidence interval (two standard deviations) for mean discharge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_15_min,dischargeLowerRemnUncert,Lower bound of the 95% confidence interval (two standard deviations) for mean discharge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_15_min,dischargeCorrectionApplied,Indicates whether discharge data were corrected (1=corrected; 0=no correction required; Empty=record not reviewed),unsigned integer,NA,basic,integer,NA,NA
+csd_15_min,dischargeGapFilledInterpolation,Indicates whether discharge data were corrected via gap-filling with linear interpolation (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,dischargeGapFilledConstant,Indicates whether discharge data were corrected via gap-filling with a constant value (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,dischargeGapFilledUSGS,Indicates whether discharge data were corrected via gap-filling with a NEON-USGS discharge regression (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,dischargeCorrectedShiftPre,Indicates whether discharge data were corrected via a constant bias shift applied prior to other gap-filling methods (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,dischargeCorrectedShiftPost,Indicates whether discharge data were corrected via a constant bias shift applied after other gap-filling methods were applied (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightGapFilledInterpolation,Indicates whether water column height data were corrected via gap-filling with linear interpolation (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightGapFilledConstant,Indicates whether water column height data were corrected via gap-filling with a constant value (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightGapFilledTransducer,Indicates whether water column height data were corrected via gap-filling with a regression against data collected by a co-located pressure transducer sensor (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightGapFilledConductivity,Indicates whether water column height data were corrected via gap-filling with a regression against data collected by a co-located specific conductance sensor (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightCorrectedShiftPre,Indicates whether water column height data were corrected via a constant bias shift applied prior to applying gap-filling methods (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightCorrectedShiftPost,Indicates whether water column height data were corrected via a constant bias shift applied after gap-filling methods were applied (1=method used; 0=method not used; Empty=record not reviewed),unsigned integer,NA,expanded,integer,NA,NA
+csd_15_min,waterColumnHeightNullFailQM,Quality metric that summarizes the failed outcomes of the null test for water column height over the averaging period; as a percent,real,percent,expanded,*.##(round),NA,NA
+csd_15_min,dischargeFinalQF,Discharge final quality flag indicating whether a data product has passed or failed an overall assessment of its quality; detailed in ATBD (1=fail; 0=pass),unsigned integer,NA,basic,integer,NA,NA
+csd_15_min,dischargeFinalQFSciRvw,Discharge final quality flag indicating whether a data product has failed a science review of its quality detailed in NEON.DOC.001113 (1=fail; 0=pass; Empty=record not reviewed),unsigned integer,NA,basic,integer,NA,NA
+csd_15_min,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+csd_15_min,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+csd_constantBiasShift,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+csd_constantBiasShift,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+csd_constantBiasShift,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+csd_constantBiasShift,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+csd_constantBiasShift,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_constantBiasShift,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_constantBiasShift,gapFilledDataStream,Identifier for the instrumented data stream to be gap-filled,string,NA,expanded,LOV,NA,NA
+csd_constantBiasShift,stationHorizontalID,Horizontal code for station,string,NA,expanded,asIs,NA,NA
+csd_constantBiasShift,constantBiasShiftValue,The magnitude and direction of a set constant bias shift,real,NA,expanded,*.##(round),NA,NA
+csd_constantBiasShift,constantBiasShiftUnits,The units applied to a set constant bias shift,string,NA,expanded,LOV,NA,NA
+csd_constantBiasShift,constantBiasShiftOrder,Differentiates constant bias shifts that were applied to the data either before or after the data were gap-filled,string,NA,expanded,LOV,NA,NA
+csd_constantBiasShift,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+csd_continuousDischarge,siteID,NEON site code,string,NA,basic,asIs,NA,NA
+csd_continuousDischarge,stationHorizontalID,Horizontal code for station,string,NA,basic,asIs,NA,NA
+csd_continuousDischarge,namedLocation,Name of the measurement location in the NEON database,string,NA,basic,asIs,NA,NA
+csd_continuousDischarge,endDate,The end date-time or interval during which an event occurred,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(round),NA,NA
+csd_continuousDischarge,curveID,Unique identifier for the curve fit to gauge and discharge measurements,string,NA,basic,asIs,NA,NA
+csd_continuousDischarge,regressionID,Unique identifier for a gauge height vs. water column height regression equation,string,NA,basic,asIs,NA,NA
+csd_continuousDischarge,calibratedPressure,Calibrated surface water pressure,real,kilopascal,basic,*.##(round),NA,NA
+csd_continuousDischarge,equivalentStage,Stage equivalent to the observed surface water pressure,real,meter,basic,*.##(round),NA,NA
+csd_continuousDischarge,nonSystematicUnc,Uncertainty associated with instrumental noise and free surface fluctuations; sensor repeatability,real,meter,expanded,*.##(round),NA,NA
+csd_continuousDischarge,systematicUnc,Uncertainty associated with the relationship between water column height and staff gauge readings; quantified by the difference between calculatedStage and recorded gaugeHeight,real,meter,expanded,*.##(round),NA,NA
+csd_continuousDischarge,stageUnc,Uncertainty associated with the stage timeseries data; the sum of nonSystematicUnc and systematicUnc,real,meter,basic,*.##(round),NA,NA
+csd_continuousDischarge,maxpostDischarge,Total maximum posterior estimate of stream or river discharge; equal to the mode value of the posterior distribution,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQMedian,Median of discharge posterior distribution including parametric error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQLower2Std,Lower bound of the 95% confidence interval (two standard deviations) for maxpostDischarge including parametric error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQUpper2Std,Upper bound of the 95% confidence interval (two standard deviations) for maxpostDischarge including parametric error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQLower1Std,Lower bound of the 68% confidence interval (one standard deviation) for maxpostDischarge including parametric error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQUpper1Std,Upper bound of the 68% confidence interval (one standard deviation) for maxpostDischarge including parametric error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQMean,Mean of discharge posterior distribution including parametric error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withParaUncQStdDev,Standard deviation of discharge posterior distribution including parametric error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQMedian,Median of discharge posterior distribution including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQLower2Std,Lower bound of the 95% confidence interval (two standard deviations) for maxpostDischarge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQUpper2Std,Upper bound of the 95% confidence interval (two standard deviations) for maxpostDischarge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQLower1Std,Lower bound of the 68% confidence interval (one standard deviation) for maxpostDischarge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQUpper1Std,Upper bound of the 68% confidence interval (one standard deviation) for maxpostDischarge including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQMean,Mean of discharge posterior distribution including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,withRemnUncQStdDev,Standard deviation of discharge posterior distribution including parametric and remnant error associated with the rating curve fit,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischarge,dischargeNullQF,Discharge quality flag for the null test detailed in NEON.DOC.011081 (1=fail; 0=pass; -1=NA (i.e. could not be run)),signed integer,NA,expanded,integer,NA,NA
+csd_continuousDischarge,dischargeValidCalQF,"Quality flag for the valid calibration check of discharge detailed in NEON.DOC.011081 (1=fail; 0=pass; -1=NA (i.e., could not be run))",signed integer,NA,expanded,integer,NA,NA
+csd_continuousDischarge,dischargeSuspectCalQF,Quality flag for the suspect calibration check of discharge detailed in NEON.DOC.011081 (1=fail; 0=pass; -1=NA (i.e. could not be run)),signed integer,NA,expanded,integer,NA,NA
+csd_continuousDischarge,dischargeFinalQF,Discharge final quality flag indicating whether a data product has passed or failed an overall assessment of its quality; detailed in ATBD (1=fail; 0=pass),unsigned integer,NA,basic,integer,NA,NA
+csd_continuousDischarge,dischargeFinalQFSciRvw,Discharge final quality flag indicating whether a data product has failed a science review of its quality detailed in NEON.DOC.001113 (1=fail; 0=pass; Empty=record not reviewed),unsigned integer,NA,basic,integer,NA,NA
+csd_continuousDischarge,sWatElevFinalQFSciRvw,"Surface water elevation quality flag indicating whether a data product has failed a science review of its quality, detailed in NEON.DOC.001113 (2=fail and data redacted, 1=fail but data retained and may be useful with additional corrections or filtering, 0=previous quality concern resolved and final quality flag correctly reflects data quality, Empty=pass/not reviewed)",unsigned integer,NA,expanded,integer,NA,NA
+csd_continuousDischarge,logDataQF,"Quality flag indicating whether data were collected while sensor was in logging mode (1=logged data, 0=streamed data)",unsigned integer,NA,expanded,integer,NA,NA
+csd_continuousDischarge,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+csd_continuousDischarge,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+csd_continuousDischargeUSGS,siteID,NEON site code,string,NA,basic,asIs,NA,NA
+csd_continuousDischargeUSGS,namedLocation,Name of the measurement location in the NEON database,string,NA,basic,asIs,NA,NA
+csd_continuousDischargeUSGS,usgsSiteNumber,Unique identification number (site_no in USGS data queries) for the USGS site nearest to the NEON site,integer,number,basic,asIs,NA,NA
+csd_continuousDischargeUSGS,endDate,The end date-time or interval during which an event occurred,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(round),NA,NA
+csd_continuousDischargeUSGS,usgsDischargeRegID,Unique identifier for a NEON vs. USGS discharge regression equation,string,NA,basic,asIs,NA,NA
+csd_continuousDischargeUSGS,usgsDischarge,Total stream or river discharge at USGS site,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischargeUSGS,withRegressionUncQLower2Std,Lower bound of the 95% confidence interval (two standard deviations) for usgsDischarge including error associated with the fit of measured NEON discharge with USGS discharge in a log-log transformed regression,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischargeUSGS,withRegressionUncQUpper2Std,Upper bound of the 95% confidence interval (two standard deviations) for usgsDischarge including error associated with the fit of measured NEON discharge with USGS discharge in a log-log transformed regression,real,litersPerSecond,basic,*.##(round),NA,NA
+csd_continuousDischargeUSGS,withRegressionUncQLower1Std,Lower bound of the 68% confidence interval (one standard deviation) for usgsDischarge including error associated with the fit of measured NEON discharge with USGS discharge in a log-log transformed regression,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischargeUSGS,withRegressionUncQUpper1Std,Upper bound of the 68% confidence interval (one standard deviation) for usgsDischarge including error associated with the fit of measured NEON discharge with USGS discharge in a log-log transformed regression,real,litersPerSecond,expanded,*.##(round),NA,NA
+csd_continuousDischargeUSGS,usgsDownloadDate,The date-time at which USGS discharge data were downloaded for processing,string,NA,expanded,asIs,NA,NA
+csd_continuousDischargeUSGS,usgsValueQualCode,List of USGS instantaneous value qualification codes at time of download; separated by spaces,string,NA,expanded,asIs,NA,NA
+csd_continuousDischargeUSGS,dischargeFinalQF,Discharge final quality flag indicating whether a data product has passed or failed an overall assessment of its quality; detailed in ATBD (1=fail; 0=pass),unsigned integer,NA,basic,integer,NA,NA
+csd_continuousDischargeUSGS,dischargeFinalQFSciRvw,Discharge final quality flag indicating whether a data product has failed a science review of its quality detailed in NEON.DOC.001113 (1=fail; 0=pass; Empty=record not reviewed),unsigned integer,NA,basic,integer,NA,NA
+csd_dataGapToFillMethodMapping,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+csd_dataGapToFillMethodMapping,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+csd_dataGapToFillMethodMapping,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+csd_dataGapToFillMethodMapping,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+csd_dataGapToFillMethodMapping,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dataGapToFillMethodMapping,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dataGapToFillMethodMapping,gapFilledDataStream,Identifier for the instrumented data stream to be gap-filled,string,NA,expanded,LOV,NA,NA
+csd_dataGapToFillMethodMapping,percentFillOtherTroll,Percentage of a gap in water column height data that can be filled using correlated data from an adjacent sensor that produces water column height data,real,percent,expanded,integer,NA,NA
+csd_dataGapToFillMethodMapping,percentFillSondeSpCond,Percentage of a gap in water column height data that can be filled using correlated data from an adjacent sensor that produces specific conductance data,real,percent,expanded,integer,NA,NA
+csd_dataGapToFillMethodMapping,canFillUSGS,"Indication whether, for a gap in continuous discharge data, there are data available from a nearby United States Geological Survey (USGS) station that can be used for gap-filling",string,NA,expanded,LOV,NA,NA
+csd_dataGapToFillMethodMapping,gapFillMethod,Method used to fill gap in Instrumented Systems (IS) data stream,string,NA,expanded,LOV,NA,NA
+csd_dataGapToFillMethodMapping,gapFillRegressionID,Unique identifier for a regression developed for gap-filling an instrumented data stream,string,NA,expanded,asIs,NA,NA
+csd_dataGapToFillMethodMapping,interpolateRemainingGap,"Indication whether, if a gap in water column height data cannot be filled one hundred percent by another sensor, the remaining gap should be filled via linear interpolation",string,NA,expanded,LOV,NA,NA
+csd_dataGapToFillMethodMapping,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,usgsSiteNumber,Unique identification number (site_no in USGS data queries) for the USGS site nearest to the NEON site,integer,number,expanded,integer,NA,NA
+csd_dischargeRegressionUSGS,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dischargeRegressionUSGS,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegStartDate,The start date-time or interval for which a NEON vs. USGS discharge regression equation is active,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegEndDate,The end date-time or interval for which a NEON vs. USGS discharge regression equation is active,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegID,Unique identifier for a NEON vs. USGS discharge regression equation,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegSlope,Slope of the NEON vs. USGS discharge regression equation,real,litersPerSecond,expanded,*.###(round),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegSlopeSE,Standard error of the slope coefficient of the NEON vs. USGS discharge regression equation,real,litersPerSecond,expanded,*.###(round),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegIntercept,Intercept of the NEON vs. USGS discharge regression equation,real,litersPerSecond,expanded,*.###(round),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegInterceptSE,Standard error of the intercept coefficient of the NEON vs. USGS discharge regression equation,real,litersPerSecond,expanded,*.###(round),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegRSquared,Coefficient of determination (R^2) for the NEON vs. USGS discharge regression,real,NA,expanded,*.###(round),NA,NA
+csd_dischargeRegressionUSGS,usgsDischargeRegAllEventIDs,All of the eventIDs associated with NEON discharge measurements that are used to determine the NEON vs. USGS discharge regression equation,string,NA,expanded,asIs,NA,NA
+csd_dischargeRegressionUSGS,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gapFillingRegression,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gapFillingRegression,gapFillRegressionID,Unique identifier for a regression developed for gap-filling an instrumented data stream,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,gapFilledDataStream,Identifier for the instrumented data stream to be gap-filled,string,NA,expanded,LOV,NA,NA
+csd_gapFillingRegression,dependentStationHorizontalID,Horizontal identifier for the station representing the dependent regression variable,integer,number,expanded,integer,NA,NA
+csd_gapFillingRegression,independentStationHorizontalID,Horizontal identifier for the station representing the independent regression variable,integer,number,expanded,integer,NA,NA
+csd_gapFillingRegression,gapFillRegressionSlope,Slope of the gap-filling regression equation,real,NA,expanded,*.###(round),NA,NA
+csd_gapFillingRegression,gapFillRegressionSlopeSE,Standard error of the slope coefficient of the gap-filling regression equation,real,NA,expanded,*.###(round),NA,NA
+csd_gapFillingRegression,gapFillRegressionIntercept,Intercept of the gap-filling regression equation,real,NA,expanded,*.###(round),NA,NA
+csd_gapFillingRegression,gapFillRegressionInterceptSE,Standard error of the intercept coefficient of the gap-filling regression equation,real,NA,expanded,*.###(round),NA,NA
+csd_gapFillingRegression,gapFillRegressionRSquared,Coefficient of determination (R^2) for the gap-filling regression,real,NA,expanded,*.###(round),NA,NA
+csd_gapFillingRegression,gapFillRegressionUnits,Units of the gap-filling regression equation,string,NA,expanded,LOV,NA,NA
+csd_gapFillingRegression,usgsSiteNumber,Unique identification number (site_no in USGS data queries) for the USGS site nearest to the NEON site,integer,number,expanded,integer,NA,NA
+csd_gapFillingRegression,usgsDownloadDate,The date-time at which USGS discharge data were downloaded for processing,string,NA,expanded,asIs,NA,NA
+csd_gapFillingRegression,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gaugeWaterColumnRegression,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gaugeWaterColumnRegression,regressionStartDate,The start date-time or interval for which a gauge height vs. water column height regression equation is active,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gaugeWaterColumnRegression,regressionEndDate,The end date-time or interval for which a gauge height vs. water column height regression equation is active,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),NA,NA
+csd_gaugeWaterColumnRegression,regressionID,Unique identifier for a gauge height vs. water column height regression equation,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,regressionSlope,Slope of the linear gauge height vs. water column height regression equation,real,meter,expanded,*.###(round),NA,NA
+csd_gaugeWaterColumnRegression,regressionIntercept,Intercept of the linear gauge height vs. water column height regression equation,real,meter,expanded,*.###(round),NA,NA
+csd_gaugeWaterColumnRegression,regressionRSquared,Coefficient of determination (R^2) for the linear gauge height vs. water column height regression,real,NA,expanded,*.###(round),NA,NA
+csd_gaugeWaterColumnRegression,regressionAllEventIDs,All of the eventIDs associated with guage readings that are used to determine the gauge height vs. water column height regression equation,string,NA,expanded,asIs,NA,NA
+csd_gaugeWaterColumnRegression,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+science_review_flags,domainID,Unique identifier of the NEON domain,string,NA,appended by stackByTable,NA,N,
+science_review_flags,siteID,NEON site code,string,NA,appended by stackByTable,NA,N,
+science_review_flags,horizontalPosition,Index of horizontal location at a NEON site,string,NA,appended by stackByTable,NA,N,
+science_review_flags,verticalPosition,Index of vertical location at a NEON site,string,NA,appended by stackByTable,NA,N,
+science_review_flags,srfID,Record identifier for science review flag,integer,NA,basic,asIs,NA,NA
+science_review_flags,startDateTime,Date and time at which a sampling is initiated,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z',NA,NA
+science_review_flags,endDateTime,Date and time at which a sampling is completed,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z',NA,NA
+science_review_flags,domainID,Unique identifier of the NEON domain,string,NA,basic,asIs,NA,NA
+science_review_flags,siteID,NEON site code,string,NA,basic,asIs,NA,NA
+science_review_flags,dpID,"Data product identifier in the form of DPL.DPNUM.REV where DPL indicates data product level (0-4), DPNUM indicates a five-numeral identification number for the data product, and REV indicates a revision number.",string,NA,basic,asIs,NA,NA
+science_review_flags,fieldName,Parameter name in data file,string,NA,basic,asIs,NA,NA
+science_review_flags,horizontalPosition,"A three-character alphanumeric code for the measurement locations within one horizontal plane. For example, if one surface measurement were made at each of five soil array plots, the number in the HOR field would range from 001-005.",string,NA,basic,asIs,NA,NA
+science_review_flags,verticalPosition,"A three-character alphanumeric code for the measurement locations within one vertical plane. For example, if one temperature measurement is made at each vertical level of a tower with 8 levels, the number in the VER field would range from 010-080.",string,NA,basic,asIs,NA,NA
+science_review_flags,srfValue,Value of the science review quality flag (0=previous quality concern resolved and final quality flag correctly reflects data quality; 1=fail but data retained and may be useful with additional corrections or filtering; 2=fail and data redacted; Empty=not reviewed),integer,NA,basic,asIs,NA,NA
+science_review_flags,srfValueJustification,Justification for srfValue. Updates to srfValue will be documented by multiple justifications separated by colon symbols.,string,NA,basic,asIs,NA,NA
+science_review_flags,createDateTime,The date and time the science review flag was first generated,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z',NA,NA
+science_review_flags,lastUpdateDateTime,The date and time the science review flag was last updated,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z',NA,NA
+science_review_flags,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+science_review_flags,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+sdrc_gaugePressureRelationship,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,siteID,NEON site code,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,stationHorizontalID,Horizontal code for station,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(round),NA,NA
+sdrc_gaugePressureRelationship,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(round),NA,NA
+sdrc_gaugePressureRelationship,calcWaterColumnHeight,Calculated water column height based off of the calibratedPressMean,real,meter,expanded,*.##(round),NA,NA
+sdrc_gaugePressureRelationship,regressionID,Unique identifier for a gauge height vs. water column height regression equation,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,calculatedStage,Stage calculated from the sum of the water column height and sensorStaffGaugeOffset,real,meter,expanded,*.##(round),NA,NA
+sdrc_gaugePressureRelationship,gaugeCollectDate,Date of the gauge height reading collection event,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(round),NA,NA
+sdrc_gaugePressureRelationship,gaugeEventID,Event ID for the gauge reading,string,NA,expanded,asIs,NA,NA
+sdrc_gaugePressureRelationship,gaugeHeight,Height of water at staff gauge,real,meter,expanded,*.##(round),NA,NA
+sdrc_gaugePressureRelationship,dataQF,Data quality flag,string,NA,expanded,asIs,NA,NA
+sensor_positions,HOR.VER,"The combined value of the horizontal and vertical location indices specified in each data file name. The HOR index is a three-character alphanumeric code for the measurement locations within one horizontal plane. For example, if one surface measurement were made at each of five soil array plots, the number in the HOR field would range from 001-005. The VER index is a three-character alphanumeric code for the measurement locations within one vertical plane. For example, if one temperature measurement is made at each vertical level of a tower with 8 levels, the number in the VER field would range from 010-080.",string,NA,basic,asIs,NA,NA
+sensor_positions,sensorLocationID,The unique identifier for the location used by NEON for where the sensor was installed,string,NA,basic,asIs,NA,NA
+sensor_positions,sensorLocationDescription,The description of the location where the sensor was installed,string,NA,basic,asIs,NA,NA
+sensor_positions,positionStartDateTime,"The start date and time in UTC for the position information supplied for the location. If the position or orientation of the location changed over time, additional rows will supply the full history.",dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+sensor_positions,positionEndDateTime,The end date and time in UTC for the position information supplied for the location. A blank value indicates that the position information was still valid for the location at the time of publishing.,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+sensor_positions,referenceLocationID,"The unique identifier for the reference location from which the xOffset, yOffset, and zOffset distances are measured",string,NA,basic,asIs,NA,NA
+sensor_positions,referenceLocationIDDescription,The description of the reference location,string,NA,basic,asIs,NA,NA
+sensor_positions,referenceLocationIDStartDateTime,"The start date and time in UTC for the position information supplied for the reference location. If the position of the reference location changed over time, additional rows will supply the full history.",dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+sensor_positions,referenceLocationIDEndDateTime,The end date and time in UTC for the position information supplied for the reference location,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm:ss'Z'(floor),NA,NA
+sensor_positions,xOffset,"The offset along the x-axis of the local coordinate frame, in meters, from the reference location to the location where the sensor was installed",real,meter,basic,*.##(round),NA,NA
+sensor_positions,yOffset,"The offset along the y-axis of the local coordinate frame, in meters, from the reference location to the location where the sensor was installed",real,meter,basic,*.##(round),NA,NA
+sensor_positions,zOffset,"The offset along the z-axis of the local coordinate frame, in meters, from the reference location to the location where the sensor was installed. The z-axis is always aligned with up, positive values indicating heights above the reference location.",real,meter,basic,*.##(round),NA,NA
+sensor_positions,pitch,"The elevation angle, in degrees, in the vertical plane at which the sensor is oriented relative to the horizontal plane. Some sensors differ from this convention. See the product detail page for any exceptions.",real,degree,basic,*.##(round),NA,NA
+sensor_positions,roll,"The roll angle at which the sensor is oriented, in degrees, about the longitudinal axis of the sensor",real,degree,basic,*.##(round),NA,NA
+sensor_positions,azimuth,"The azimuth or yaw angle, in degrees, at which the sensor is facing relative to true north. Some sensors differ from this convention. See the product detail page for any exceptions.",real,degree,basic,*.##(round),NA,NA
+sensor_positions,locationReferenceLatitude,"The geographic latitude, in degrees, of the reference location",real,decimalDegree,basic,*.######(round),NA,NA
+sensor_positions,locationReferenceLongitude,"The geographic longitude, in degrees, of the reference location",real,degree,basic,*.######(round),NA,NA
+sensor_positions,locationReferenceElevation,"The elevation, in meters, above mean sea level",real,meter,basic,*.##(round),NA,NA
+sensor_positions,eastOffset,"The offset along the cardinal east direction, in meters, from the reference location to the location where the sensor was installed",real,meter,basic,*.##(round),NA,NA
+sensor_positions,northOffset,"The offset along the cardinal north (true) direction, in meters, from the reference location to the location where the sensor was installed",real,meter,basic,*.##(round),NA,NA
+sensor_positions,xAzimuth,"The azimuth, in degrees, of the local x-axis with respect to true north, used to convert the distance offset measured along the local x-axis (xOffset) to the offset along the cardinal east direction (eastOffset)",real,degree,basic,*.##(round),NA,NA
+sensor_positions,yAzimuth,"The azimuth, in degrees, of the local y-axis with respect to true north, used to convert the distance offset measured along the local y-axis (yOffset) to the offset along the cardinal north direction (northOffset)",real,degree,basic,*.##(round),NA,NA
+sensor_positions,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+sensor_positions,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,

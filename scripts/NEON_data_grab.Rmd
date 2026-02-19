@@ -73,8 +73,8 @@ list2env((loadByProduct(dpID = discharge,
 variables_00130 %>% 
   write_csv(here("data", "raw", "variables_00130.csv"))
 
-csd_continuousDischarge %>% 
-  write_csv(here("data", "raw", "discharge_raw.csv"))
+csd_15_min %>% 
+  write_csv(here("data", "raw", "csd_15_min.csv"))
 
 ```
 
