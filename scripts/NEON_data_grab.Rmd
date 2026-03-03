@@ -67,7 +67,7 @@ list2env((loadByProduct(dpID = discharge,
                         enddate = end_date)),
          .GlobalEnv)
 ```
-Saving raw data files to 
+
 ```{r}
 #Save raw data DONE
 variables_00130 %>% 
@@ -159,5 +159,4 @@ variables_20086 %>%
 
 csd_15_min %>% 
   write_csv(here("data", "raw", "csd_15_min.csv"))
-
 ```
