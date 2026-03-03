@@ -52,6 +52,17 @@ discharge %>%
 ```
 
 
+Here we begun processing the fish data. First we needed to add in the raw data.
+
+```{r}
+fish_raw <- read_csv(here("data", "raw", "fsh_perFish.csv"))
+
+head(fish_raw)
+str(fish_raw)
+view(fish_raw)
+```
+
+
 ## Preliminary Plot
 ```{r}
 ggplot(data = discharge,
