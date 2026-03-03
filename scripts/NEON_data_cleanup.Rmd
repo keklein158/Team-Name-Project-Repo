@@ -61,6 +61,30 @@ head(fish_raw)
 str(fish_raw)
 view(fish_raw)
 ```
+```{r}
+fish <- fish_raw %>% 
+  select(domainID,
+         siteID,
+         namedLocation,
+         passStartTime,
+         passEndTime,
+         passNumber,
+         boutEndDate,
+         eventID,
+         taxonID,
+         taxonRank,
+         scientificName,
+         morphospeciesID,
+         identificationQualifier,
+         dataQF,
+         specimenNumber,
+         fishTotalLength,
+         fishWeight,
+         samplerType,
+         efMortality,
+         efInjury,
+         fishLifeStage)
+```
 
 
 ## Preliminary Plot
