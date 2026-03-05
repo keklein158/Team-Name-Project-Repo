@@ -95,6 +95,8 @@ fish %>%
 
 ```
 
+
+Here we begun processing the aquatic plant data from NEON. First we added in the raw data and viewed the structure of the variables.
 ```{r}
 plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
 
