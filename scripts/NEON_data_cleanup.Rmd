@@ -93,6 +93,14 @@ fish %>%
 
 ```
 
+```{r}
+plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
+
+head(plant_raw)
+str(plant_raw)
+view(plant_raw)
+```
+
 ## Preliminary Plot
 ```{r}
 ggplot(data = discharge,
