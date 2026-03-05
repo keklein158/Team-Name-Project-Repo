@@ -100,6 +100,34 @@ head(plant_raw)
 str(plant_raw)
 view(plant_raw)
 ```
+```{r}
+plant <- plant_raw %>% 
+  select(domainID,
+         siteID,
+         namedLocation,
+         collectDate,
+         sampleCondition,
+         aquaticPlantType,
+         growthForm,
+         taxonID,
+         scientificName,
+         morphospeciesID,
+         phylum,
+         division,
+         class,
+         order,
+         family,
+         genus,
+         section,
+         specificEpithet,
+         infraspecificEpithet,
+         variety,
+         form,
+         taxonRank,
+         identifiedDate,
+         dataQF)
+```
+
 
 ## Preliminary Plot
 ```{r}
