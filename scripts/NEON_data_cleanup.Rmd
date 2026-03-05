@@ -128,7 +128,12 @@ plant <- plant_raw %>%
          dataQF)
 ```
 
+```{r}
 
+plant %>% 
+  write_csv(here("data", "processed", "plant_processed.csv"))
+
+```
 ## Preliminary Plot
 ```{r}
 ggplot(data = discharge,
