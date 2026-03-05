@@ -84,14 +84,14 @@ fish <- fish_raw %>%
          efInjury,
          fishLifeStage)
 ```
-
+here we placed fish_processed in the processed data file 
 ```{r}
 
 fish %>% 
   write_csv(here("data", "processed", "fish_processed.csv"))
 
 ```
-
+here we read in the plant_raw data, and narrowed downt he plant variables we will be using to plot.
 ```{r}
 plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
 
@@ -126,7 +126,7 @@ plant <- plant_raw %>%
          identifiedDate,
          dataQF)
 ```
-
+here we placed plant_processed in the processed data file 
 ```{r}
 
 plant %>% 
