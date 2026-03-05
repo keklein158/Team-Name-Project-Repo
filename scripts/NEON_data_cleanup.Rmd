@@ -8,13 +8,14 @@ date: "2026-02-19"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
- Load in Tidyverse and Here library
+ Load in Tidyverse and Here packages
 ```{r}
 library(tidyverse)
 library(here)
 ```
 
- Read in the raw data for discharge and check structures of the variables. We also want to see the general layout of the data.  
+Read in the raw data for discharge and check structures of the variables. 
+We also want to see the general layout of the data.  
 ```{r}
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
 
@@ -84,6 +85,7 @@ fish <- fish_raw %>%
          efInjury,
          fishLifeStage)
 ```
+
 here we placed fish_processed in the processed data file 
 ```{r}
 
@@ -91,6 +93,7 @@ fish %>%
   write_csv(here("data", "processed", "fish_processed.csv"))
 
 ```
+
 here we read in the plant_raw data, and narrowed downt he plant variables we will be using to plot.
 ```{r}
 plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
@@ -126,6 +129,7 @@ plant <- plant_raw %>%
          identifiedDate,
          dataQF)
 ```
+
 here we placed plant_processed in the processed data file 
 ```{r}
 
@@ -133,6 +137,7 @@ plant %>%
   write_csv(here("data", "processed", "plant_processed.csv"))
 
 ```
+
 ## Preliminary Plot
 ```{r}
 ggplot(data = discharge,
