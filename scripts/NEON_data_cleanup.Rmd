@@ -51,7 +51,7 @@ discharge %>%
 ```
 
 
-Here we begun processing the fish data. First we needed to add in the raw data.
+Here we begun processing the fish data. First we added in the raw data and viewed the structure of the variables.
 
 ```{r}
 fish_raw <- read_csv(here("data", "raw", "fsh_perFish.csv"))
@@ -60,6 +60,8 @@ head(fish_raw)
 str(fish_raw)
 view(fish_raw)
 ```
+
+Began selecting different variables within the fish data that could be important for later. Selected similar variables to the discharge data as well as included variables that could give us information about the fish in periods of low flow.  
 ```{r}
 fish <- fish_raw %>% 
   select(domainID,
@@ -85,6 +87,7 @@ fish <- fish_raw %>%
          fishLifeStage)
 ```
 
+Here we added in script to write a new csv file with the data that we processed above. 
 ```{r}
 
 fish %>% 
