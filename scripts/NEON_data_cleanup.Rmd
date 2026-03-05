@@ -8,14 +8,13 @@ date: "2026-02-19"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Load in Tidyverse and Here library
-
+ Load in Tidyverse and Here library
 ```{r}
 library(tidyverse)
 library(here)
 ```
-## read in the raw data for discharge and check structure 
 
+ Read in the raw data for discharge and check structures of the variables. We also want to see the general layout of the data.  
 ```{r}
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
 
@@ -24,8 +23,7 @@ str(discharge_raw)
 view(discharge_raw)
 ```
 
-## select variables 
-
+Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets. 
 ```{r}
 discharge <- discharge_raw %>% 
   select(domainID,
@@ -44,6 +42,7 @@ discharge <- discharge_raw %>%
          dischargeFinalQFSciRvw)
 ```
 
+Write a new csv file for the new data selections we made. Also saved this in the processed data folder. 
 ```{r}
 
 discharge %>% 
